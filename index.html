@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的视频网站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f0f0f0;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        video {
+            width: 100%;
+            max-width: 720px;
+            border-radius: 8px;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 欢迎观看我的视频</h1>
+        <p>这是一个简单的视频分享网站</p>
+        
+        <!-- 视频播放器 -->
+        <video controls>
+            <source src="my-video.mp4" type="video/mp4">
+            您的浏览器不支持视频播放，请使用Chrome、Firefox等现代浏览器。
+        </video>
+        
+        <div style="margin-top: 20px;">
+            <p>分享给朋友：<span id="url">加载中...</span></p>
+        </div>
+    </div>
+
+    <script>
+        // 显示网站链接
+        document.getElementById('url').textContent = window.location.href;
+    </script>
+</body>
+</html>
